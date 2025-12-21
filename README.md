@@ -1,24 +1,45 @@
-## Complete Recent Discord Quest
+# 🎮 Discord Quest Auto-Completer Guide
 
-> [!NOTE]
-> This no longer works in browser!
-> 
-> This no longer works if you're alone in vc! Somebody else has to join you!
->
+This file contains the setup instructions and the script required to automate Discord Quests.
 
-> [!WARNING]
-> There are now two quest types ("stream" and "play")! Pay attention to the instructions!
->
+---
 
-How to use this script:
-1. Accept a quest under User Settings -> Gift Inventory
-2. Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> to open DevTools
-3. Go to the `Console` tab
-4. Paste the following code and hit enter:
+## 🛠️ Phase 1: Enable Developer Tools
+If Ctrl+Shift+I does not work in your Discord app, you must update your settings file.
 
-___
+1. Press Win + R, type %appdata%\discord, and hit Enter.
+2. Open settings.json with Notepad.
+3. Replace the entire content with the following:
 
-```js
+{
+  "audioSubsystem": "experimental",
+  "offloadAdmControls": true,
+  "BACKGROUND_COLOR": "#000000",
+  "enableHardwareAcceleration": true,
+  "OPTIN_OPTIONAL_UPDATES": true,
+  "chromiumSwitches": {},
+  "IS_MAXIMIZED": true,
+  "IS_MINIMIZED": false,
+  "WINDOW_BOUNDS": {
+    "x": 320,
+    "y": 156,
+    "width": 1280,
+    "height": 720
+  },
+  "DANGEROUS_ENABLE_DEVTOOLS_ONLY_ENABLE_IF_YOU_KNOW_WHAT_YOURE_DOING": true
+}
+
+4. Restart Discord completely.
+
+---
+
+## 🚀 Phase 2: Running the Script
+
+1. Open Discord Desktop App.
+2. Go to User Settings -> Gift Inventory and click "Accept" on your quest.
+3. Press Ctrl + Shift + I to open the Console.
+4. Paste the script below and press Enter:
+
 delete window.$;
 let wpRequire = webpackChunkdiscord_app.push([[Symbol()], {}, r => r]);
 webpackChunkdiscord_app.pop();
@@ -185,65 +206,10 @@ if(quests.length === 0) {
 	}
 	doJob()
 }
-```
 
-5. Follow the printed instructions depending on what type of quest you have
-    - If your quest says to "play" the game, you can just wait and do nothing
-    - If your quest says to "stream" the game, join a vc with a friend or alt and stream any window
-7. Wait for 15 minutes
-8. You can now claim the reward in User Settings -> Gift Inventory!
+---
 
-You can track the progress by looking at the `Quest progress:` prints in the Console tab, or by reopening the Gift Inventory tab in settings.
-
-## FAQ
-
-**Q: Ctrl + Shift + I doesn't work**
-
-A: Either download the [ptb client](https://discord.com/api/downloads/distributions/app/installers/latest?channel=ptb&platform=win&arch=x64) or [canary client](https://canary.discord.com/), or use [this](https://www.reddit.com/r/discordapp/comments/sc61n3/comment/hu4fw5x/) to enable DevTools on stable
-
-B: Press WIN + R key in discord and Run ```%appdata%\discord\settings.json``` and write this line or pase this text 
-
-```json
-{
-  "audioSubsystem": "experimental",
-  "offloadAdmControls": true,
-  "BACKGROUND_COLOR": "#000000",
-  "enableHardwareAcceleration": true,
-  "OPTIN_OPTIONAL_UPDATES": true,
-  "chromiumSwitches": {},
-  "IS_MAXIMIZED": true,
-  "IS_MINIMIZED": false,
-  "WINDOW_BOUNDS": {
-    "x": 320,
-    "y": 156,
-    "width": 1280,
-    "height": 720
-  },
- "DANGEROUS_ENABLE_DEVTOOLS_ONLY_ENABLE_IF_YOU_KNOW_WHAT_YOURE_DOING": true 
-}
-```
-
-**Q: I get an error saying "Unauthorized"**
-
-A: Discord has patched the script from working in browsers. Use the desktop app, or alternatively find some extension which lets you change your User-Agent and append the string `Electron/` anywhere in it.
-
-They have also started checking how many people are in the vc, so make sure you join it on at least 1 other account.
-
-
-**Q: I get a syntax error/unexpected token error**
-
-A: Make sure your browser isn't auto-translating this website before copying the script. Turn off any translator extensions and try again.
-
-
-**Q: I get a different error**
-
-A: Make sure you're copy/pasting the script correctly and that you've have done all the steps.
-
-
-**Q: Can you make the script auto accept the quest/reward?**
-
-A: No. Both of those actions may show a captcha, so automating them is not a good idea. Just do the two clicks yourself.
-
-___
-
-<sup>Side note: Please don't post your "fixed" or "improved" versions of the script in the comments. It creates unnecessary confusion, often doesn't fix anything, and sometimes puts other people's accounts at risk. I might redact/delete such comments without notice. Thank you for understanding.</sup>
+## ⚠️ Important Requirements
+- You MUST be in a Voice Channel with at least one other person (or an alt).
+- If it is a "Stream" quest, you must stream any window.
+- The script will take ~15 minutes to complete. Check progress in the Console.
