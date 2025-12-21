@@ -7,7 +7,7 @@ This file contains the setup instructions and the script required to automate Di
 ## 🛠️ Phase 1: Enable Developer Tools
 If Ctrl+Shift+I does not work in your Discord app, you must update your settings file.
 
-1. Press Win + R, type %appdata%\discord, and hit Enter.
+1. Press Win + R, type `%appdata%\discord`, and hit Enter.
 2. Open settings.json with Notepad.
 3. Replace the entire content with the following:
 
