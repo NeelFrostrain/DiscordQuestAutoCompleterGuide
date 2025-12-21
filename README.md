@@ -11,6 +11,7 @@ If Ctrl+Shift+I does not work in your Discord app, you must update your settings
 2. Open settings.json with Notepad.
 3. Replace the entire content with the following:
 
+```json
 {
   "audioSubsystem": "experimental",
   "offloadAdmControls": true,
@@ -28,7 +29,7 @@ If Ctrl+Shift+I does not work in your Discord app, you must update your settings
   },
   "DANGEROUS_ENABLE_DEVTOOLS_ONLY_ENABLE_IF_YOU_KNOW_WHAT_YOURE_DOING": true
 }
-
+```
 4. Restart Discord completely.
 
 ---
