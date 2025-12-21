@@ -16,6 +16,8 @@ How to use this script:
 3. Go to the `Console` tab
 4. Paste the following code and hit enter:
 
+___
+
 ```js
 delete window.$;
 let wpRequire = webpackChunkdiscord_app.push([[Symbol()], {}, r => r]);
