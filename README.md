@@ -39,7 +39,7 @@ If Ctrl+Shift+I does not work in your Discord app, you must update your settings
 2. Go to User Settings -> Gift Inventory and click "Accept" on your quest.
 3. Press Ctrl + Shift + I to open the Console.
 4. Paste the script below and press Enter:
-
+```
 delete window.$;
 let wpRequire = webpackChunkdiscord_app.push([[Symbol()], {}, r => r]);
 webpackChunkdiscord_app.pop();
@@ -206,7 +206,7 @@ if(quests.length === 0) {
 	}
 	doJob()
 }
-
+```
 ---
 
 ## ⚠️ Important Requirements
