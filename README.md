@@ -1,7 +1,7 @@
 # 🎮 Discord Quest Auto-Completer Guide
 
 This file contains the setup instructions and the script required to automate Discord Quests.
-### You Need Setup Discord Setting File Or Download [DISROC OFFICIAL PTB](https://ptb.discord.com/) Or [DISROC CANARY](https://canary.discord.com/)
+### You Need Setup Discord Setting File Or Download [DISROC OFFICIAL PTB](https://ptb.discord.com/) Or [DISROC OFFICIAL CANARY](https://canary.discord.com/)
 ---
 
 ## 🛠️ Phase 1: Enable Developer Tools
