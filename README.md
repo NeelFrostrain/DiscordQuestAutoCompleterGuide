@@ -1,7 +1,6 @@
 # 🎮 Discord Quest Auto-Completer Guide
 
-This file contains the setup instructions and the script required to automate Discord Quests.
-### You Need Setup Discord Setting File Or Download [DISROC OFFICIAL PTB](https://ptb.discord.com/) Or [DISROC OFFICIAL CANARY](https://canary.discord.com/)
+**This guide provides a streamlined workflow for automating Discord Quests using the Developer Console. This method bypasses the requirement of actually playing or streaming specific games for the required duration.**
 ---
 
 ## 🛠️ Phase 1: Enable Developer Tools
@@ -210,7 +209,13 @@ if(quests.length === 0) {
 ```
 ---
 
-## ⚠️ Important Requirements
-- You MUST be in a Voice Channel with at least one other person (or an alt).
-- If it is a "Stream" quest, you must stream any window.
-- The script will take ~15 minutes to complete. Check progress in the Console.
+## ⚠️ Requirements & Troubleshooting
+- Voice Channels: For "Play" or "Stream" quests, you MUST be in a Voice Channel.
+- Audience: At least one other user (or your own alt account) must be in the Voice Channel with you.
+- Streaming: If it is a "Stream" quest, start streaming any window (e.g., Notepad or a browser tab) to trigger the progress heartbeats.
+- Timeframe: Quests typically take 15–20 minutes to complete. Do not close Discord until the console logs "Quest completed!".
+
+## Need Discord PTB/Canary?
+- If the standard app is giving you trouble, these versions often have DevTools enabled by default:
+- Download Discord PTB
+- Download Discord Canary
